@@ -7,9 +7,9 @@ import path from 'path'
 import { errorHandler, notFound } from './app/middleware/error.middleware.js'
 
 import authRoutes from './app/auth/auth.routes.js'
-import userRoutes from './app/exercise/exercise.routes.js'
 import exerciseRoutes from './app/exercise/exercise.routes.js'
 import { prisma } from './app/prisma.js'
+import userRoutes from './app/user/user.routes.js'
 import workoutRoutes from './app/workout/workout.routes.js'
 
 const app = express()
