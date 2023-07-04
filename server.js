@@ -1,4 +1,5 @@
 import 'colors'
+import cors from 'cors'
 import 'dotenv/config'
 import express from 'express'
 import morgan from 'morgan'
@@ -12,11 +13,15 @@ import { prisma } from './app/prisma.js'
 import userRoutes from './app/user/user.routes.js'
 import workoutRoutes from './app/workout/workout.routes.js'
 
+// getUserProfile
+// get Workout log and get exercise log exercise
+
 const app = express()
 
 async function main() {
 	if (process.env.NODE_ENV === 'development') app.use(morgan('dev'))
 
+	app.use(cors())
 	app.use(express.json())
 
 	const __dirname = path.resolve()
